@@ -1,0 +1,80 @@
+.grid-container {
+  display: grid;
+  grid-template-columns: 150px 150px 150px 150px ;
+  background-color: "#EFEFEF";
+  padding: 10px;
+   grid-template-areas:
+    "a b c d"
+    "e f g d"
+    "h i j d"
+    "k k k d";
+    justify-content: center;
+}
+
+.inner-div-desktop{
+    color: #FFFFFF;
+    font-size: 60px;
+}
+
+.header-div-mob{
+    text-align: center;
+    background-color: #333333;
+    color: white;
+    padding-top: 15px;
+    padding-bottom: 15px;
+}
+
+.header-div-desktop{
+    text-align: center;
+    color: black;
+    padding-top: 15px;
+    padding-bottom: 15px;
+}
+
+.inner-div-mob{
+    color: black;
+    font-size: 20px;
+}
+
+ .buttons{
+    background-color: "#72C3DC";
+    border-color: "#72C3DC";
+    box-shadow: "#72C3DC";
+    color : "white";
+    width: 120px ;
+    height: 30px;
+    font-size: 9px;
+} 
+
+.button-corner {border-radius: 4px;}
+
+.grid-child {
+  text-align: center;
+  padding: 20px 0;
+ 
+}
+
+.div-containing-buttons {
+  grid-row: 1 / 4;
+  grid-area: d
+  
+}
+.div-containing-last-row {
+  grid-column: 1 / 4;
+  grid-area: k
+}
+
+.grid-container-mobile {
+  display: grid;
+  grid-gap: .5rem;
+  padding: 20px 10px 10px 10px;
+  background-color: "black";
+}
+
+.first-row-div-mobile{
+    text-align: center;
+    background-color: "#EFEFEF";
+    margin-top: 8px;
+}
+
+
