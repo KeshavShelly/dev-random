@@ -4,8 +4,8 @@ let color = ["#6F98A8", "#6F98A8", "#2B8EAD", "#2F454E", "#2B8EAD", "#2F454E", "
 
 screen.width > 375 ? isMobile = false : isMobile = true;
 
-
-var headerDiv = document.createElement('div'); //header-div-desktop
+//header-div-desktop and mobile
+var headerDiv = document.createElement('div');
 headerDiv.id = "headerDivId"
 isMobile ? headerDiv.classList.add('header-div-mob') : headerDiv.classList.add('header-div-desktop');
 headerDiv.innerHTML = "Shuffle and Sort"
@@ -31,7 +31,7 @@ for (let i = 1; i < 10; i++) {
     innerDiv.id = `item${i}`
     isMobile ? innerDiv.style.backgroundColor = "#EFEFEF" : innerDiv.style.backgroundColor = color[i];
     isMobile ? innerDiv.classList.add('inner-div-mob', 'grid-child') : innerDiv.classList.add('inner-div-desktop', 'grid-child');
-    isMobile ? innerDiv.style.borderLeft = "10px solid " + color[i] : "";
+    isMobile ? innerDiv.style.borderLeft = `10px solid ${color[i]}` : "";
     parentDiv.appendChild(innerDiv);
     innerDiv.innerHTML = i;
 }
@@ -90,8 +90,8 @@ function createAndStyleButton(buttonName) {
     newButton.style.borderColor = "#72C3DC";
     newButton.style.boxShadow = "#72C3DC";
     newButton.style.color = "white";
-    isMobile ?  newButton.style.width = "75px" : newButton.style.width = "120px"
-    isMobile ?  newButton.style.height = "45px" : newButton.style.height = "30px"
+    isMobile ? newButton.style.width = "75px" : newButton.style.width = "120px"
+    isMobile ? newButton.style.height = "45px" : newButton.style.height = "30px"
     newButton.style.fontSize = "9px"
     newButton.classList.add('button-corner');
     return newButton;
@@ -133,6 +133,6 @@ if (isMobile) {
     lastRowDivForMobile.style.textAlign = "center";
     lastRowDivForMobile.style.fontStyle = "italic"
     lastRowDivForMobile.innerHTML = "Shuffle and Sort by Keshav";
-    document.getElementsByTagName("body")[0].style.border = "10px solid #333333";
+    document.getElementsByTagName("body")[0].style.border = "10px solid black";
 }
 
